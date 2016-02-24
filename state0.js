@@ -11,7 +11,7 @@ demo.state0.prototype = {
     create: function(){
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        game.world.setBounds(0, 0, 2813, 1000); 
+        game.world.setBounds(0, 0, 2813, 1000);
         var tree = game.add.sprite(0, 0, 'trees');
         game.stage.backgroundColor = '#00FF00';
         adam = game.add.sprite(0, 450, 'adam');
@@ -20,10 +20,10 @@ demo.state0.prototype = {
         adam.animations.add('walk', [0, 1, 2, 3, 4]);
         game.physics.enable(adam);
         adam.body.collideWorldBounds = true;
-        
+
         game.camera.follow(adam);
         game.camera.deadzone = new Phaser.Rectangle(750 - 300, 0, 600, 1000);
-        
+
     },
     update: function(){
         if(game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
